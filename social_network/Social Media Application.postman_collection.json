@@ -1,0 +1,771 @@
+{
+	"info": {
+		"_postman_id": "155f6951-6074-40ef-b109-08a2d8f5f35c",
+		"name": "Social Media Application",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35944912"
+	},
+	"item": [
+		{
+			"name": "User Signup",
+			"item": [
+				{
+					"name": "User Signup With Wrong Email Pattern",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"aaravkumar\",\n  \"email\": \"aaravkumar@@gmail-com\",\n  \"password\": \"aarav123\",\n  \"password2\": \"aarav123\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/signup/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"signup",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Signup With Correct Email Pattern",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "// {\n//   \"username\": \"aaravkumar\",\n//   \"email\": \"aaravkumar@gmail.com\",\n//   \"password\": \"aarav123\",\n//   \"password2\": \"aarav123\"\n// }\n\n// {\n//   \"username\": \"vivaansharma\",\n//   \"email\": \"vivaansharma@gmail.com\",\n//   \"password\": \"vivaan123\",\n//   \"password2\": \"vivaan123\"\n// }\n\n// {\n//   \"username\": \"adityasingh\",\n//   \"email\": \"adityasingh@gmail.com\",\n//   \"password\": \"aditya123\",\n//   \"password2\": \"aditya123\"\n// }\n\n\n// {\n//   \"username\": \"riyanshgupta\",\n//   \"email\": \"riyanshgupta@gmail.com\",\n//   \"password\": \"riyansh123\",\n//   \"password2\": \"riyansh123\"\n// }\n\n\n// {\n//   \"username\": \"arjunsingh\",\n//   \"email\": \"arjunsingh@gmail.com\",\n//   \"password\": \"arjun123\",\n//   \"password2\": \"arjun123\"\n// }\n\n\n// {\n//   \"username\": \"krishnavarma\",\n//   \"email\": \"krishnavarma@gmail.com\",\n//   \"password\": \"krishna123\",\n//   \"password2\": \"krishna123\"\n// }\n\n\n// {\n//   \"username\": \"ishansharma\",\n//   \"email\": \"ishansharma@gmail.com\",\n//   \"password\": \"ishan123\",\n//   \"password2\": \"ishan123\"\n// }\n\n\n// {\n//   \"username\": \"atharvgupta\",\n//   \"email\": \"atharvgupta@gmail.com\",\n//   \"password\": \"atharv123\",\n//   \"password2\": \"atharv123\"\n// }\n\n\n// {\n//   \"username\": \"reyanshpatel\",\n//   \"email\": \"reyanshpatel@gmail.com\",\n//   \"password\": \"reyansh123\",\n//   \"password2\": \"reyansh123\"\n// }\n\n\n// {\n//   \"username\": \"shivanshkhanna\",\n//   \"email\": \"shivanshkhanna@gmail.com\",\n//   \"password\": \"shivansh123\",\n//   \"password2\": \"shivansh123\"\n// }\n\n\n// {\n//   \"username\": \"dhruvchopra\",\n//   \"email\": \"dhruvchopra@gmail.com\",\n//   \"password\": \"dhruv123\",\n//   \"password2\": \"dhruv123\"\n// }\n\n\n// {\n//   \"username\": \"yugmehta\",\n//   \"email\": \"yugmehta@gmail.com\",\n//   \"password\": \"yug123\",\n//   \"password2\": \"yug123\"\n// }\n\n// {\n//   \"username\": \"ananyajain\",\n//   \"email\": \"ananyajain@gmail.com\",\n//   \"password\": \"ananya123\",\n//   \"password2\": \"ananya123\"\n// }\n\n\n// {\n//   \"username\": \"mohammedali\",\n//   \"email\": \"mohammedali@gmail.com\",\n//   \"password\": \"mohammed123\",\n//   \"password2\": \"mohammed123\"\n// }\n\n\n// {\n//   \"username\": \"ahmedkhan\",\n//   \"email\": \"ahmedkhan@gmail.com\",\n//   \"password\": \"ahmed123\",\n//   \"password2\": \"ahmed123\"\n// }\n\n\n// {\n//   \"username\": \"suryanarayanan\",\n//   \"email\": \"suryanarayanan@gmail.com\",\n//   \"password\": \"surya123\",\n//   \"password2\": \"surya123\"\n// }\n\n\n// {\n//   \"username\": \"rajeshpatel\",\n//   \"email\": \"rajeshpatel@gmail.com\",\n//   \"password\": \"rajesh123\",\n//   \"password2\": \"rajesh123\"\n// }\n\n// {\n//   \"username\": \"rakeshsharma\",\n//   \"email\": \"rakeshsharma@gmail.com\",\n//   \"password\": \"rakesh123\",\n//   \"password2\": \"rakesh123\"\n// }\n\n\n// {\n//   \"username\": \"vishalgupta\",\n//   \"email\": \"vishalgupta@gmail.com\",\n//   \"password\": \"vishal123\",\n//   \"password2\": \"vishal123\"\n// }\n\n\n// {\n//   \"username\": \"rahulsharma\",\n//   \"email\": \"rahulsharma@gmail.com\",\n//   \"password\": \"rahul123\",\n//   \"password2\": \"rahul123\"\n// }\n\n\n// {\n//   \"username\": \"sanketpatel\",\n//   \"email\": \"sanketpatel@gmail.com\",\n//   \"password\": \"sanket123\",\n//   \"password2\": \"sanket123\"\n// }\n\n// {\n//   \"username\": \"gopalverma\",\n//   \"email\": \"gopalverma@gmail.com\",\n//   \"password\": \"gopal123\",\n//   \"password2\": \"gopal123\"\n// }\n\n\n// {\n//   \"username\": \"vikashrao\",\n//   \"email\": \"vikashrao@gmail.com\",\n//   \"password\": \"vikash123\",\n//   \"password2\": \"vikash123\"\n// }\n\n\n// {\n//   \"username\": \"priyanshiyadav\",\n//   \"email\": \"priyanshiyadav@gmail.com\",\n//   \"password\": \"priyanshi123\",\n//   \"password2\": \"priyanshi123\"\n// }\n\n// {\n//   \"username\": \"rajeshwaryadav\",\n//   \"email\": \"rajeshwaryadav@gmail.com\",\n//   \"password\": \"rajeshwari123\",\n//   \"password2\": \"rajeshwari123\"\n// }\n\n// {\n//   \"username\": \"amarendra\",\n//   \"email\": \"amarendra@gmail.com\",\n//   \"password\": \"amarendra123\",\n//   \"password2\": \"amarendra123\"\n// }\n\n\n// {\n//   \"username\": \"amar\",\n//   \"email\": \"amar@gmail.com\",\n//   \"password\": \"amar123\",\n//   \"password2\": \"amar123\"\n// }\n\n\n// {\n//   \"username\": \"aman\",\n//   \"email\": \"aman@gmail.com\",\n//   \"password\": \"aman123\",\n//   \"password2\": \"aman123\"\n// }\n\n\n{\n  \"username\": \"abhirama\",\n  \"email\": \"abhirama@gmail.com\",\n  \"password\": \"abhirama123\",\n  \"password2\": \"abhirama123\"\n}\n\n\n\n\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/signup/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"signup",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User Login",
+			"item": [
+				{
+					"name": "User Login With Unregistered Email",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"unregisteredemail@gmail.com\",\n  \"password\": \"aarav123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/login/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Login With Wrong Password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"aaravkumar@gmail.com\",\n  \"password\": \"wrongpassword\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/login/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Login With Valid Credentials",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "// {\n//   \"email\": \"aaravkumar@gmail.com\",\n//   \"password\": \"aarav123\"\n// }\n// {\n//   \"email\": \"vivaansharma@gmail.com\",\n//   \"password\": \"vivaan123\"\n// }\n// {\n//   \"email\": \"adityasingh@gmail.com\",\n//   \"password\": \"aditya123\"\n// }\n// {\n//   \"email\": \"riyanshgupta@gmail.com\",\n//   \"password\": \"riyansh123\"\n// }\n// {\n//   \"email\": \"arjunsingh@gmail.com\",\n//   \"password\": \"arjun123\"\n// }\n// {\n//   \"email\": \"krishnavarma@gmail.com\",\n//   \"password\": \"krishna123\"\n// }\n// {\n//   \"email\": \"ishansharma@gmail.com\",\n//   \"password\": \"ishan123\"\n// }\n// {\n//   \"email\": \"atharvgupta@gmail.com\",\n//   \"password\": \"atharv123\"\n// }\n// {\n//   \"email\": \"reyanshpatel@gmail.com\",\n//   \"password\": \"reyansh123\"\n// }\n// {\n//     \"email\": \"shivanshkhanna@gmail.com\",\n//     \"password\": \"shivansh123\"\n// }\n// {\n//     \"email\": \"dhruvchopra@gmail.com\",\n//     \"password\": \"dhruv123\"\n// }\n// {\n//     \"email\": \"yugmehta@gmail.com\",\n//     \"password\": \"yug123\"\n// }\n// {\n//     \"email\": \"ananyajain@gmail.com\",\n//     \"password\": \"ananya123\"\n// }\n// {\n//     \"email\": \"mohammedali@gmail.com\",\n//     \"password\": \"mohammed123\"\n// }\n// {\n//     \"email\": \"ahmedkhan@gmail.com\",\n//     \"password\": \"ahmed123\"\n// }\n// {\n//     \"email\": \"suryanarayanan@gmail.com\",\n//     \"password\": \"surya123\"\n// }\n// {\n//     \"email\": \"rajeshpatel@gmail.com\",\n//     \"password\": \"rajesh123\"\n// }\n// {\n//     \"email\": \"rakeshsharma@gmail.com\",\n//     \"password\": \"rakesh123\"\n// }\n// {\n//     \"email\": \"vishalgupta@gmail.com\",\n//     \"password\": \"vishal123\"\n// }\n// {\n//     \"email\": \"rahulsharma@gmail.com\",\n//     \"password\": \"rahul123\"\n// }\n// {\n//     \"email\": \"sanketpatel@gmail.com\",\n//     \"password\": \"sanket123\"\n// }\n// {\n//     \"email\": \"gopalverma@gmail.com\",\n//     \"password\": \"gopal123\"\n// }\n// {\n//     \"email\": \"vikashrao@gmail.com\",\n//     \"password\": \"vikash123\"\n// }\n// {\n//     \"email\": \"priyanshiyadav@gmail.com\",\n//     \"password\": \"priyanshi123\"\n// }\n\n// {\n//     \"email\": \"rajeshwaryadav@gmail.com\",\n//     \"password\": \"rajeshwari123\"\n// }\n\n// {\n//   \"email\": \"amarendra@gmail.com\",\n//   \"password\": \"amarendra123\"\n// }\n\n// {\n//   \"email\": \"amar@gmail.com\",\n//   \"password\": \"amar123\"\n// }\n\n\n// {\n//   \"email\": \"aman@gmail.com\",\n//   \"password\": \"aman123\"\n// }\n\n\n{\n  \"email\": \"abhirama@gmail.com\",\n  \"password\": \"abhirama123\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/login/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User Search",
+			"item": [
+				{
+					"name": "Search User by Username",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 634c14f7f6558846c4f0b6f02fb2d3ee5519ac08",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/search/?q=aman",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"search",
+								""
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "aman"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search User by Email",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 634c14f7f6558846c4f0b6f02fb2d3ee5519ac08",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/search/?q=suryanarayanan@gmail.com",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"search",
+								""
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "suryanarayanan@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Users by Substring 'am'",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 634c14f7f6558846c4f0b6f02fb2d3ee5519ac08",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/search/?q=am",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"search",
+								""
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "am"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Send Friend Request",
+			"item": [
+				{
+					"name": "Send Friend Request from User X to Invalid User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Token 996420fdd50742bd32498c35cb743f7fba41332b",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"to_user_email\": \"invaliduser@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/friend-request/send/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"friend-request",
+								"send",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send Friend Request from User X to Multiple Users",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Token 996420fdd50742bd32498c35cb743f7fba41332b",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "// {\n//     \"to_user_email\": \"shivanshkhanna@gmail.com\"\n// }\n\n// {\n//     \"to_user_email\": \"yugmehta@gmail.com\"\n// }\n\n// {\n//     \"to_user_email\": \"rajeshwaryadav@gmail.com\"\n// }\n\n// {\n//     \"to_user_email\": \"rahulsharma@gmail.com\"\n// }\n\n// {\n//     \"to_user_email\": \"priyanshiyadav@gmail.com\"\n// }\n\n\n{\n    \"to_user_email\": \"gopalverma@gmail.com\"\n}\n\n\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/friend-request/send/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"friend-request",
+								"send",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send Friend Request from User Y to Multiple Users",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Token 857ac9d4c1abaa89f3455fa9f0abe64d959af96d",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "// {\n//     \"to_user_email\": \"abhirama@gmail.com\"\n// }\n\n// {\n//     \"to_user_email\": \"vikashrao@gmail.com\"\n// }\n\n// {\n//     \"to_user_email\": \"arjunsingh@gmail.com\"\n// }\n\n{\n    \"to_user_email\": \"priyanshiyadav@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/friend-request/send/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"friend-request",
+								"send",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Accept Friend Request",
+			"item": [
+				{
+					"name": "Accept Friend Request - Ineligible User",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token c784426ea0706e8fc65025532aff4463d5a40947",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/friend-request/accept/2/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"friend-request",
+								"accept",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Accept Friend Request - Nonexistent ID",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token c784426ea0706e8fc65025532aff4463d5a40947",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/friend-request/accept/20/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"friend-request",
+								"accept",
+								"20",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Accept Friend Request - Valid ID",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 4b9350ec59bc6a1647121262845a02e7e4e2b8bc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/friend-request/accept/12/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"friend-request",
+								"accept",
+								"12",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reject Friend Request",
+			"item": [
+				{
+					"name": "Delete Friend Request - Ineligible User",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 4174bc2a101a45ae058dcf94c4827ee7408787c9",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/friend-request/reject/2/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"friend-request",
+								"reject",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Friend Request - Nonexistent ID",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 4174bc2a101a45ae058dcf94c4827ee7408787c9",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/friend-request/reject/20/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"friend-request",
+								"reject",
+								"20",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Friend Request - Valid ID",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 4174bc2a101a45ae058dcf94c4827ee7408787c9",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/friend-request/reject/7/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"friend-request",
+								"reject",
+								"7",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Friends List",
+			"item": [
+				{
+					"name": "List of Friends - Accepted Requests",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 996420fdd50742bd32498c35cb743f7fba41332b",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/friends/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"friends",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pending Friend Requests List",
+			"item": [
+				{
+					"name": "List Pending Friend Requests - Unaccepted",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 4b9350ec59bc6a1647121262845a02e7e4e2b8bc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/friend-requests/pending/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"friend-requests",
+								"pending",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Rate Limiting on Friend Requests",
+			"item": [
+				{
+					"name": "Send Friend Request - Limit Exceeded",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Token 426594946fdc3cfd48348608d54d6d526ca292ed",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "// {\n//     \"to_user_email\": \"aman@gmail.com\"\n// }\n\n// {\n//     \"to_user_email\": \"krishnavarma@gmail.com\"\n// }\n\n// {\n//     \"to_user_email\": \"rajeshpatel@gmail.com\"\n// }\n\n{\n    \"to_user_email\": \"vishalgupta@gmail.com\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/friend-request/send/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"friend-request",
+								"send",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
