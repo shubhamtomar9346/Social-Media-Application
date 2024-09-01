@@ -30,15 +30,29 @@ This project is a social networking application built using Django Rest Framewor
 
 1. **Clone the Repository**:
     ```bash
-    git clone <repository-url>
+    mkdir Project
+    cd Project
+    git clone https://github.com/shubhamtomar9346/Social-Media-Application.git
+    cd Social-Media-Application
     cd social_network
     ```
 
-2. **(Optional) Create and Activate a Virtual Environment**:
-    ```bash
-    python3 -m venv venv
-    source venv/bin/activate   # For Windows: venv\Scripts\activate
-    ```
+2. **(Optional) Configure and Activate the Virtual Environment**:
+    - For macOS:
+      ```bash
+      source magic_box3.12_social_media/bin/activate
+      ```
+    - For Windows:
+      ```bash
+      magic_box3.12_social_media\Scripts\activate
+      ```
+
+    - Alternatively, configure the interpreter in PyCharm:
+      1. Open PyCharm and go to `File > Settings > Project: Your Project Name > Python Interpreter`.
+      2. Click on the gear icon and select `Add`.
+      3. Choose `Existing Environment`.
+      4. Navigate to `magic_box3.12_social_media/bin/python` and select it.
+      5. Restart PyCharm to automatically activate the virtual environment.
 
 3. **Install Dependencies**:
     ```bash
@@ -84,18 +98,12 @@ This project is a social networking application built using Django Rest Framewor
 
 ## Virtual Environment
 
-This project includes a pre-configured Python virtual environment located in the `magic_box3.12_social_media` folder. 
+This project includes a pre-configured Python virtual environment located in the `magic_box3.12_social_media` folder.
 
 ### Options:
 
 1. **Use Existing Virtual Environment**:
-    - You can set `magic_box3.12_social_media` as the interpreter in your IDE (e.g., PyCharm).
-  
-    - In PyCharm:
-        1. Go to `File > Settings > Project: Your Project Name > Python Interpreter`.
-        2. Click on the gear icon and select `Add`.
-        3. Choose `Existing Environment`.
-        4. Navigate to `magic_box3.12_social_media/bin/python` and select it.
+    - Set `magic_box3.12_social_media` as the interpreter in your IDE (e.g., PyCharm) as described above.
 
 2. **Create a New Virtual Environment**:
     - If you prefer, you can create your own virtual environment.
@@ -140,7 +148,7 @@ FROM python:3.12.4-slim
 
 # Set environment variables to prevent Python from writing pyc files and to buffer stdout and stderr
 ENV PYTHONDONTWRITEBYTECODE=1
-ENV PYTHONUNBUFFEREDIFDEF=1
+ENV PYTHONUNBUFFERED=1
 
 # Set work directory
 WORKDIR /app
